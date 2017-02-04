@@ -3,7 +3,7 @@ package com.sentosh1ne.sollitaire.pojos
 /**
  * Created by sentosh1ne on 04.02.2017.
  */
-data class Card(val value: Int,val suit: String,var faceUp: Boolean){
+data class Card(val value: Int,val suit: String,var faceUp: Boolean = false){
 
     override fun toString(): String =
         if (faceUp)
