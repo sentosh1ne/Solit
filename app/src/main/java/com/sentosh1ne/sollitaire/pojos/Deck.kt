@@ -11,7 +11,7 @@ import java.util.*
  */
 class Deck{
     val cards = Array(52,{ Card(it % 13, getSuit(it)) })
-    val deck = cards.toMutableList()
+    var currentCards = cards.toMutableList()
 
     private fun getSuit(i: Int) = when(i){
         0 -> clubs
@@ -23,11 +23,11 @@ class Deck{
         }
     }
 
-    fun draw(): Card = deck.removeAt(0);
+    fun draw(): Card = currentCards.removeAt(0);
 
     fun reset() = {
-        deck.forEach { card -> card.faceUp = false }
-        Collections.shuffle(deck)
+        currentCards.forEach { card -> card.faceUp = false }
+        Collections.shuffle(currentCards)
     }
 
 
