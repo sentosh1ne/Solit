@@ -1,4 +1,4 @@
-package com.sentosh1ne.sollitaire.game.view.custom
+package com.sentosh1ne.sollitaire.custom
 
 import android.content.Context
 import android.view.ViewManager

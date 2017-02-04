@@ -17,10 +17,8 @@ class Deck{
         0 -> clubs
         1 -> diamonds
         2 -> hearts
-        3 -> spades
-        else -> {
-            throw IllegalArgumentException("Wrong suit id")
-        }
+        else -> spades
+
     }
 
     fun draw(): Card = currentCards.removeAt(0);
