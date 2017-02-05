@@ -5,6 +5,7 @@ import com.sentosh1ne.sollitaire.R
 import com.sentosh1ne.sollitaire.game.view.MainActivity
 import com.sentosh1ne.sollitaire.custom.DeckView
 import com.sentosh1ne.sollitaire.custom.deckView
+import com.sentosh1ne.sollitaire.custom.wasteView
 import org.jetbrains.anko.AnkoComponent
 import org.jetbrains.anko.AnkoContext
 import org.jetbrains.anko.*
@@ -26,11 +27,13 @@ class MainActivityUI : AnkoComponent<MainActivity>{
             linearLayout {
                 deckView{
                     id = R.id.todraw_deck
-                }.lparams(cardWidth,cardHeight)
-                imageView(imageResource = emptyPileDrawable).lparams(cardWidth,cardHeight)
-                view().lparams (cardWidth,0)
+                }.lparams(cardWidth, cardHeight)
+                wasteView {
+                    id = R.id.waste_pile
+                }.lparams(cardWidth, cardHeight)
+                view().lparams (cardWidth, 0)
                 for (i in 0..3) {
-                    imageView(imageResource = emptyPileDrawable).lparams(cardWidth,cardHeight)
+                    imageView(imageResource = emptyPileDrawable).lparams(cardWidth, cardHeight)
                 }
             }
 

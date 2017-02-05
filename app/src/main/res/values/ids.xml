@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="todraw_deck" type="id"/>
+    <item name="waste_pile" type="id"/>
 </resources>
