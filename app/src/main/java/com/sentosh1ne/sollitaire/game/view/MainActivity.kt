@@ -10,6 +10,7 @@ import com.sentosh1ne.sollitaire.game.presenter.GamePresenterImpl
 import com.sentosh1ne.sollitaire.game.view.anko_component.MainActivityUI
 import com.sentosh1ne.sollitaire.custom.DeckView
 import com.sentosh1ne.sollitaire.custom.WasteView
+import com.sentosh1ne.sollitaire.game.view.anko_component.foundationViews
 import com.sentosh1ne.sollitaire.pojos.Card
 import org.jetbrains.anko.find
 import org.jetbrains.anko.setContentView
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity(),GameView {
     var deckView: DeckView? = null
     var wasteView: WasteView? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MainActivityUI().setContentView(this)
@@ -39,6 +41,9 @@ class MainActivity : AppCompatActivity(),GameView {
     override fun update(gameModel: GameModel) {
         deckView?.update()
         wasteView?.update()
+        foundationViews.forEach {
+            it!!.update()
+        }
     }
 
 
