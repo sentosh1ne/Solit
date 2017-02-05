@@ -16,7 +16,7 @@ import org.jetbrains.anko.onClick
 /**
  * Created by sentosh1ne on 04.02.2017.
  */
-class DeckView(context : Context) : ImageView(context){
+class DeckView(context : Context): ImageView(context){
     init {
         imageResource = cardBackDrawable
         onClick {

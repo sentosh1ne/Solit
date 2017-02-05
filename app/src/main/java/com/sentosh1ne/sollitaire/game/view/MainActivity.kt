@@ -11,6 +11,7 @@ import com.sentosh1ne.sollitaire.game.view.anko_component.MainActivityUI
 import com.sentosh1ne.sollitaire.custom.DeckView
 import com.sentosh1ne.sollitaire.custom.WasteView
 import com.sentosh1ne.sollitaire.game.view.anko_component.foundationViews
+import com.sentosh1ne.sollitaire.game.view.anko_component.tableauViews
 import com.sentosh1ne.sollitaire.pojos.Card
 import org.jetbrains.anko.find
 import org.jetbrains.anko.setContentView
@@ -42,6 +43,10 @@ class MainActivity : AppCompatActivity(),GameView {
         deckView?.update()
         wasteView?.update()
         foundationViews.forEach {
+            it!!.update()
+        }
+
+        tableauViews.forEach {
             it!!.update()
         }
     }
